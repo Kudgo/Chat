@@ -19,5 +19,5 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
     facebook_client_id:
     facebook_client_secret:
-    locale:
+    locale: en
 
