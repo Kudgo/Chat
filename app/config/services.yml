@@ -1,0 +1,21 @@
+parameters:
+    #parameter_name: value
+
+services:
+  app.comment_manager:
+      class: AppBundle\Service\CommentManager
+      arguments:
+      - '@doctrine.orm.entity_manager'
+  app.friend_manager:
+        class: AppBundle\Service\FriendManager
+        arguments: ['@app.facebook_friend_manager']
+  app.facebook_friend_manager:
+          class: AppBundle\Service\FacebookFriendManager
+          arguments: ['@security.token_storage'  ,
+                      '%facebook_client_id%',
+                      '%facebook_client_secret%']
+  my.custom.user_provider:
+      class:        AppBundle\Security\Core\User\MyFOSUBUserProvider
+      arguments: ['@fos_user.user_manager', { facebook: facebookId }]
+
+

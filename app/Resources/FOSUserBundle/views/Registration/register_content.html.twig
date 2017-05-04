@@ -1,0 +1,36 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div style="height:50px">
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-6" align="center">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Site registration</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div style="width:500px">
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 separator social-login-box"> <br />
+                            <a href="/connect/facebook" class="btn facebook btn-block" role="button">Login with Facebook</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 login-box">
+                            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register', 'id':'registration_form'}}) }}
+                            {{ form_widget(form) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <button type="submit" class="btn btn-labeled btn-success" form="registration_form">
+                            <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Registration</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
