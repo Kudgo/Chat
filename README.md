@@ -1,8 +1,6 @@
 Chat
 ========================
 
-Chat that is designed for test task https://gist.github.com/smirik/22d26ed316705caf1e08
-
 In order to install:
 
   1. 
